@@ -1,0 +1,220 @@
+@import "../../responsive.scss";
+
+.singlePage {
+  display: flex;
+  height: 100%;
+
+  @include md {
+    flex-direction: column;
+    height: 100%;
+    overflow-y: scroll;
+  }
+
+  .details {
+    flex: 7;
+    // height: 100%;
+    overflow-y: scroll;
+
+    @include md {
+      flex: none;
+      height: max-content;
+      margin-bottom: 50px;
+    }
+
+    .wrapper {
+        height: 100%;
+        padding: 15px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        overflow-y: scroll;
+        background-color: #efebeb;
+        border: none;
+
+      @include lg {
+        padding-right: 5px;
+      }
+      @include md {
+        padding-right: 0px;
+      }
+
+      .info {
+        margin-top: 50px;
+        border: 1px solid #999;
+        border-radius: 5px;
+        padding: 20px 10px;
+        .top {
+          display: flex;
+          justify-content: space-between;
+
+          @include sm {
+            flex-direction: column;
+            gap: 20px;
+          }
+
+          .post {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            h1 {
+              font-weight: 400;
+            }
+            .address {
+              display: flex;
+              gap: 5px;
+              align-items: center;
+              color: #888;
+              font-size: 14px;
+
+              img {
+                width: 16px;
+                height: 16px;
+              }
+            }
+            .price {
+              padding: 5px;
+              background-color: rgba(254, 205, 81, 0.438);
+              border-radius: 5px;
+              width: max-content;
+              font-size: 20px;
+              font-weight: 300;
+            }
+          }
+          .user {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            padding: 0px 50px;
+            border-radius: 10px;
+            background-color: rgba(254, 205, 81, 0.209);
+            font-weight: 600;
+
+            @include sm {
+              padding: 20px 50px;
+            }
+
+            img {
+              width: 50px;
+              height: 50px;
+              border-radius: 50%;
+              object-fit: cover;
+            }
+          }
+        }
+        .bottom {
+          margin-top: 50px;
+          color: #555;
+          line-height: 20px;
+        }
+
+        .created {
+          // margin: 10px 0 20px 0;
+          margin-top: 10px;
+          font-size: 14px;
+          color: #000;
+          padding: 10px;
+          background-color: #FFE9B2;
+          display: inline-block;
+          border-radius: 10%;
+          text-align: right;
+        }
+      }
+    }
+  }
+  .features {
+    flex: 3;
+    background-color: #fcf5f3;
+    height: 100%;
+    overflow-y: scroll;
+
+    @include md {
+      flex: none;
+      height: max-content;
+      margin-bottom: 50px;
+    }
+
+    .wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      padding: 0px 20px;
+      margin-top: 20px;
+
+      @include md {
+        padding: 20px;
+      }
+
+      img {
+        width: 24px;
+        height: 24px;
+      }
+
+      .title {
+        font-weight: bold;
+        font-size: 18px;
+        // margin-bottom: 5px;
+        padding: 5px;
+      }
+
+      .feature {
+        display: flex;
+        align-items: center;
+        padding: 7px;
+        gap: 5px;
+        border-radius: 5px;
+        background-color: #fcf5f3;
+
+        img {
+          background-color: #efebeb;;
+        }
+
+      }
+
+      .feature:nth-child(even) {
+        background-color: #fff;
+      }
+
+      .listVertical {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px;
+        background-color: #efebeb;
+        border-radius: 10px;
+      }
+      .listHorizontal {
+        display: flex;
+        justify-content: space-between;
+        padding: 20px 10px;
+        background-color: #efebeb;
+        border-radius: 10px;
+      }
+
+
+      .buttons {
+        display: flex;
+        justify-content: space-between;
+        background-color: #efebeb;
+        padding: 10px;
+
+        button {
+          padding: 20px;
+          display: flex;
+          align-items: center;
+          gap: 5px;
+          background-color: white;
+          border: 1px solid #fece51;
+          border-radius: 5px;
+          cursor: pointer;
+
+          img {
+            width: 16px;
+            height: 16px;
+          }
+        }
+      }
+    }
+  }
+}

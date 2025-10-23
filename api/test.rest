@@ -1,0 +1,58 @@
+GET http://localhost:3003
+
+###
+POST http://localhost:3003/api/auth/register
+Content-Type: application/json
+
+{
+"username": "test2",
+"email": "test2@farmeri.com",
+"password": "test2"
+}
+
+###
+POST http://localhost:3003/api/auth/login
+Content-Type: application/json
+
+{
+"username": "test2",
+"password": "test2"
+}
+
+###
+POST http://localhost:3003/api/auth/logout
+Content-Type: application/json
+
+###
+GET http://localhost:3003/api/test/should-be-logged-in
+
+###
+GET http://localhost:3003/api/test/should-be-admin
+
+###
+GET http://localhost:3003/api/users
+
+###
+GET http://localhost:3003/api/chats
+
+###
+POST http://localhost:3003/api/chats
+Content-Type: application/json
+
+{
+    "receiverId": "661009c23ee1e29d2f04ad9a"
+}
+
+###
+GET http://localhost:3003/api/chats/66142009e3fd7f43eb134ac3
+
+###
+POST http://localhost:3003/api/messages/66142009e3fd7f43eb134ac3
+Content-Type: application/json
+
+{
+    "text": "second message"
+}
+
+###
+GET http://localhost:3003/api/comments/661162e90b7179740217025b

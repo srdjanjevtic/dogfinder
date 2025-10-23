@@ -1,0 +1,34 @@
+# Tvoji fajlovi
+info.text
+client/.env.local
+api/.env
+socket/.env
+
+# Dodaj i ovo za sigurnost
+*.env*
+!.env.example  # Ovo dozvoli ako imaš template
+
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS fajlovi
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+logs/
+*.log
+
+# Build output
+dist/
+build/
+.next/  # Za Next.js

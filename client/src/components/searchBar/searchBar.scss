@@ -1,0 +1,131 @@
+@import "../../responsive.scss";
+
+.searchBar {
+  .top {
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+    padding: 5px;
+    font-size: 8px;
+    width: 100%;
+
+    @include sm {
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .species, .action {
+      
+      button {
+        padding: 6px 8px;
+        border: 1px solid #554d4d;
+        cursor: pointer;
+        background-color: white;
+        text-transform: capitalize;
+        margin-bottom: 2px;
+        
+        &.active {
+          background-color: #554d4d;
+          color: white;
+        }
+        
+        &:first-child {
+          border-top-left-radius: 10px;
+        }
+        &:last-child {
+          border-top-right-radius: 10px;
+        }
+        
+        @include sm {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+
+  form {
+    border: none;
+    display: flex;
+    justify-content: space-between;
+    height: 42px;
+    gap: 2px;
+
+    @include sm {
+      flex-direction: column;
+      border: none;
+    }
+
+    input {
+      border: 1px solid #554d4d;
+      padding: 0px 10px;
+      // width: 200px;
+      flex-basis: 20%;
+
+        &:first-child {
+            border-bottom-left-radius: 10px;
+          }
+
+      @include lg {
+        padding: 0px 5px;
+
+        &:nth-child(2),
+        &:nth-child(3) {
+          // width: 140px;
+          flex-basis: 20%;
+        }
+      }
+      @include md {
+        // width: 200px;
+        &:nth-child(2),
+        &:nth-child(3) {
+          // width: 200px;
+          flex-basis: 20%;
+        }
+      }
+
+      @include sm{
+        width: auto;
+        &:nth-child(2),
+        &:nth-child(3) {
+          width: auto;
+        }
+        padding: 20px;
+        border: 1px solid #999;
+      }
+    }
+
+    select {
+      flex-basis: 10%;
+      flex-grow: 0;
+      flex-shrink: 0;
+      padding: 0px 2px;
+    }
+
+    .search {
+      flex-basis: 20%;
+            // flex: 1;
+            background-color: teal;
+            border: 1px solid #554d4d;
+            border-bottom-right-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+
+      button {
+        border: none;
+        cursor: pointer;
+        background-color: teal;
+        
+        @include sm{
+          padding: 10px;
+        }
+        
+        img {
+          width: 20px;
+          height: 20px;
+        }
+      }
+    }
+  }
+}

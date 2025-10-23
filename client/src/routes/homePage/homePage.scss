@@ -1,0 +1,128 @@
+@import "../../responsive.scss";
+
+.homePage {
+  display: flex;
+  height: 100%;
+ 
+  .textContainer {
+    flex: 7;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    
+    .wrapper {
+      background-color: #efebeb;
+      padding: 10px 50px 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 50px;
+      height: 100%;
+      width: 100%;
+
+      p {
+        font-size: 20px;
+      }
+      
+      @include lg{
+        padding-right: 50px;
+      }
+
+      @include md{
+        padding: 5px;
+      }
+
+      @include sm{
+        justify-content: flex-start;
+      }
+
+      .title {
+        font-size: 48px;
+
+        @include lg {
+          font-size: 42px;
+        }
+      }
+
+      .boxes {
+        display: flex;
+        justify-content: space-between;
+
+        @include sm {
+          display: none;
+        }
+
+        h1 {
+          font-size: 32px;
+
+          @include lg {
+            font-size: 28px;
+          }
+        }
+
+        h2 {
+          font-size: 16px;
+          font-weight: 300;
+        }
+      }
+    }
+  }
+  
+  .right_section {
+    flex: 3;
+    flex-direction: column;
+    gap: 10px;
+    // background-color: #fcf5f3;
+    // position: relative;
+    // border: 1px solid #333;
+    // border-radius: 20px;
+    padding-top: 10px;
+    padding-right: 0px;
+    padding-bottom: 10px;
+    display: flex;
+    align-items: center;
+    z-index: 1;
+
+     .wrapper {
+          display: flex;
+          height: 100%;
+          padding: 15px;
+          flex-direction: column;
+          gap: 10px;
+          overflow-y: hidden;
+          background-color: #efebeb;
+          border: none;
+          width: 100%;
+
+          h1 {
+              font-size: 32px;
+              padding-left: 20px;  
+          
+              @include lg {
+                font-size: 28px;
+              }
+            }
+          
+          h2 {
+            font-size: 24px;
+            font-weight: 500;
+            align-self: flex-start;
+      }
+    }
+    
+    @include md {
+      display: none;
+    }
+    
+    // img {
+      //   width: 115%;
+      //   position: absolute;
+      //   right: 0;
+      
+      //   @include lg {
+        //     width: 105%;
+        //   }
+        // }
+      }
+    }
+    

@@ -1,0 +1,173 @@
+@import "../../responsive.scss";
+
+.dashboard-wrapper {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+        border: 1px solid #999;
+        
+        .buttons {
+            display: flex;
+            gap: 10px;
+            
+            button {
+                padding: 5px 10px;
+            }
+        }
+    }
+    
+    .dashboard-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        
+        @include md {
+            grid-template-columns: 1fr;
+            gap: 10px;
+        }
+        
+        @include sm {
+            grid-template-columns: 1fr;
+        }
+        
+        section {
+            padding: 10px;
+            border: 1px solid #999;
+
+        }
+            
+        section:nth-child(2) {
+            background-color: #f9edd285; 
+        }
+        }
+    }
+
+    .dashboard-container section .user, 
+    .dashboard-container section .post,
+    .dashboard-container section .chat {
+        display: flex;
+        justify-content: space-between;
+        border: 1px solid #999;
+        padding: 5px;
+        margin-bottom: 5px;
+        height: auto;
+    }
+
+    .dashboard-container section .post {
+        flex-direction: column;
+    }
+
+    .dashboard-container section .user .user-info {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding-bottom: 5px;
+        border-bottom: 1px solid #999;
+    }
+
+    .dashboard-container section .user .user-info .info {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .dashboard-container section .user {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .dashboard-container section .user .user-info img {
+        flex: 1;
+    }
+
+    .dashboard-container section.chats .chat {
+        padding: 10px;
+        
+        & .header {
+            margin-bottom: 10px;
+        }
+        
+        & .message {
+            display: flex;
+            flex-direction: column;
+            border: 1px solid #999;
+            padding: 5px;
+            margin-bottom: 5px;
+
+            & .text {
+                background-color: #d4f5df;
+            }
+        }
+
+        // & .actions {
+        //     display: flex;
+        //     justify-content: space-between;
+        //     gap: 10px;
+        //     margin-top: auto;
+        //     width: 100%;
+        // }
+    }    
+
+    .actions {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+        margin-top: auto;
+        width: 100%;
+        // padding-top: 10px;
+    }
+
+    .actions button {
+        border: none;
+        border-radius: 10px;
+        padding: 10px 20px;
+        flex-grow: 1;
+        color: white;
+        cursor: pointer;
+    }
+
+    .actions .modal-button {
+        border: none;
+        border-radius: 10px;
+        padding: 10px 20px;
+        flex-grow: 1;
+        background-color: #41612c;
+        color: white;
+        cursor: pointer;
+    }   
+
+
+    .actions button.delete {
+        background-color: rgb(255, 55, 55);
+    }
+
+    .actions button.edit {
+        background-color: rgb(30, 30, 132);
+    }
+
+    .unauthorized {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        height: 100vh;
+    }
+
+    .back-button {
+        border: none;
+        border-radius: 10px;
+        padding: 10px 20px;
+        flex-grow: 0;
+        background-color: #2518af;
+        color: white;
+        font-weight: bold;
+        margin-bottom: 60px;
+        cursor: pointer;
+    }

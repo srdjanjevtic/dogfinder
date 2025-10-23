@@ -1,0 +1,90 @@
+.login {
+  height: 100%;
+  display: flex;
+
+  .formContainer {
+    flex: 3;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("/ai-zent-dog.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      h1 {
+        text-align: center;
+        color: white;
+      }
+
+      input{
+        padding: 20px;
+        border: 1px solid gray;
+        border-radius: 10px;
+      }
+
+      button{
+        padding: 20px;
+        border-radius: 5px;
+        border: none;
+        background-color: teal;
+        color: white;
+        font-weight: bold;
+        cursor: pointer;
+
+        &:disabled{
+          background-color: #BED9D8;
+          cursor: not-allowed;
+        }
+      }
+
+      .redirect{
+        font-size: 1rem;
+        font-weight: 400;
+        color: white;
+      }
+
+      .redirect:hover{
+        cursor: pointer;
+        text-decoration: underline;
+      }
+
+      .error-message {
+        background-color: rgb(234, 71, 56);
+        color: white;
+        font-size: 14px;
+        padding: 5px;
+        text-align: center;
+        border-radius: 10px;
+      }
+
+      span{
+        color: rgba(255, 0, 0, 0.591);
+      }
+
+      a{
+        font-size: 14px;
+        color: gray;
+        border-bottom: 1px solid gray;
+        width: max-content;
+      }
+    }
+  }
+
+  .imgContainer {
+    flex: 2;
+    background-color: #fcf5f3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img {
+      width: 100%;
+    }
+  }
+}

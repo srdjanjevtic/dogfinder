@@ -1,0 +1,49 @@
+https://www.privacypolicies.com/live/340cb531-593d-4be7-8be9-c089472570c5// 
+
+// Import the necessary libraries
+const crypto = require('crypto');
+
+// Set the content type to JSON
+res.setHeader('Content-Type', 'application/json');
+
+const signedRequest = req.body.signed_request;
+const data = parseSignedRequest(signedRequest);
+const userId = data.user_id;
+
+// Start data deletion
+const statusUrl = 'https://www.<your_website>.com/deletion?id=abc123'; // URL to track the deletion
+const confirmationCode = 'abc123'; // Unique code for the deletion request
+
+const responseData = {
+  url: statusUrl,
+  confirmation_code: confirmationCode
+};
+res.json(responseData);
+
+function parseSignedRequest(signedRequest) {
+  const [encodedSignature, payload] = signedRequest.split('.', 2);
+
+  const secret = 'appsecret'; // Use your app secret here
+
+  // Decode the data
+  const signature = base64UrlDecode(encodedSignature);
+  const data = JSON.parse(base64UrlDecode(payload));
+
+  // Confirm the signature
+  const expectedSignature = crypto.createHmac('sha256', secret)
+                                .update(payload)
+                                .digest('binary');
+  if (signature !== expectedSignature) {
+    console.error('Bad Signed JSON signature!');
+    return null;
+  }
+
+  return data;
+}
+
+function base64UrlDecode(input) {
+  return Buffer.from(input.replace(/-/g, '+').replace(/_/g, '/'), 'base64').toString();
+}
+
+
+

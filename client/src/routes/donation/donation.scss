@@ -1,0 +1,5 @@
+.donation {
+    display: grid;
+    place-content: center;
+    font-size: clamp(min(10vw, 10rem), 100px, max(70vw, 80rem));
+}

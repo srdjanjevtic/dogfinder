@@ -1,0 +1,27 @@
+Lama Dev: https://www.youtube.com/watch?v=eJ3YysWaP_A&list=LL&index=11&t=90s
+
+to generate random string enter node in terminal
+cmd: node
+cmd: require('node:crypto'). randomBytes(8). toString('hex')
+
+whenever you changes prisma.schema file must run "npx prisma db push" in terminal
+
+users:
+.............................
+"username": "test1",
+"email": "test1@farmeri.com",
+"password": "test1"
+.............................
+"username": "test2",
+"email": "test2@farmeri.com",
+"password": "test2"
+.............................
+
+DogFinder
+.........
+- Novosti - News
+- Usvajanje - Adopt
+- Pomoc - Help
+- Prodaja - Sale
+- Izgubljen - Lost
+- Nadjen - Found
